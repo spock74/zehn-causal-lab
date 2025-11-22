@@ -1,73 +1,63 @@
-# React + TypeScript + Vite
+# Zehn Causal Lab: An Interactive Causal Inference Tool
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Gravity DAG is a web-based application designed to help users explore and learn about causal inference through interactive Directed Acyclic Graphs (DAGs). It provides a hands-on experience with concepts like causal graphs, probability distributions, and the effects of interventions.
 
-Currently, two official plugins are available:
+## Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive Graph Editor**: Easily create, modify, and arrange causal graphs using a drag-and-drop interface, powered by ReactFlow.
+- **Probability Visualization**: View and understand the conditional probability distributions for each node in the graph, visualized with Recharts.
+- **Causal Interventions**: Simulate interventions on nodes (using the do-operator) to see how they impact the probabilities throughout the graph.
+- **Built-in Examples**: Get started quickly with a selection of classic causal models (e.g., chains, forks, colliders, and more complex examples).
+- **Interactive Tutorial**: A step-by-step tutorial guides new users through the core concepts and functionalities of the application.
+- **LaTeX Support**: Display mathematical formulas for probabilities and causal concepts clearly using KaTeX.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) with [shadcn/ui](https://ui.shadcn.com/) components
+- **Graph Visualization**: [ReactFlow](https://reactflow.dev/)
+- **Data Visualization**: [Recharts](https://recharts.org/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Linting**: [ESLint](https://eslint.org/)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Follow these steps to set up and run the project locally. This project uses [pnpm](https://pnpm.io/) as the package manager.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1.  **Clone the repository:**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+    ```bash
+    git clone https://github.com/your-username/gravity-dag-causal.git
+    cd gravity-dag-causal
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2.  **Install dependencies:**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+    ```bash
+    pnpm install
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3.  **Run the development server:**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    ```bash
+    pnpm dev
+    ```
+
+    The application will be available at `http://localhost:5173` (or the next available port).
+
+## Usage
+
+- **Create Nodes**: Double-click on the canvas to create a new causal variable.
+- **Create Edges**: Click and drag from one node's handle to another to create a causal relationship.
+- **Select a Node**: Click on a node to view its associated conditional probability table in the side panel.
+- **Perform Interventions**: Use the "Intervention" controls in the side panel to set a variable to a specific value and observe its downstream effects.
+- **Explore Examples**: Use the "Examples" menu to load pre-built graphs that demonstrate different causal structures.
+
+## Screenshots
+
+YTBD
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
