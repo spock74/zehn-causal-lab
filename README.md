@@ -1,6 +1,6 @@
-# Zehn Causal Lab: An Interactive Causal Inference Tool
+# Zehn Causal Lab - An Interactive Causal Inference Tool
 
-Gravity DAG is a web-based application designed to help users explore and learn about causal inference through interactive Directed Acyclic Graphs (DAGs). It provides a hands-on experience with concepts like causal graphs, probability distributions, and the effects of interventions.
+Zehn Causal Lab is a web-based application designed to help users explore and learn about causal inference through interactive Directed Acyclic Graphs (DAGs). It provides a hands-on experience with concepts like causal graphs, probability distributions, and the effects of interventions.
 
 ## Key Features
 
@@ -28,8 +28,8 @@ Follow these steps to set up and run the project locally. This project uses [pnp
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/gravity-dag-causal.git
-    cd gravity-dag-causal
+    git clone https://github.com/spock74/zehn-causal-lab.git    
+    cd zehn-causal-lab
     ```
 
 2.  **Install dependencies:**
