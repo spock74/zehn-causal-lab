@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import "./App.css";
 import GraphCanvas from './components/GraphCanvas';
 import TutorialOverlay from './components/TutorialOverlay';
@@ -14,13 +14,20 @@ function App() {
   const [isDark, setIsDark] = useState(true);
   const [showTutorial, setShowTutorial] = useState(false);
 
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDark]);
+
   const toggleTheme = () => {
     setIsDark(!isDark);
-    document.documentElement.classList.toggle('dark');
   };
 
   return (
-    <div className={`w-screen h-screen flex flex-col bg-background text-foreground overflow-hidden ${isDark ? 'dark' : ''}`}>
+    <div className={`w-screen h-screen flex flex-col bg-background text-foreground overflow-hidden`}>
       <TutorialOverlay isOpen={showTutorial} onClose={() => setShowTutorial(false)} />
       
       {/* Header */}

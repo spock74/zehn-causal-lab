@@ -24,7 +24,7 @@ const TutorialOverlay = ({ isOpen, onClose }: TutorialOverlayProps) => {
 
   return (
     <div className="absolute inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-sm p-4">
-      <div className="w-full max-w-4xl h-[80vh] bg-card text-card-foreground border border-border rounded-2xl flex overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-200">
+      <div className="w-full max-w-4xl h-[80vh] bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-50 border border-border rounded-2xl flex overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-200">
         
         {/* Sidebar */}
         <div className="w-64 bg-muted/30 border-r flex flex-col">
