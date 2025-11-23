@@ -1,5 +1,5 @@
 import type { CausalGraph } from '../engine/Graph';
-import type { InferenceEngine } from '../engine/Inference';
+
 import type { State } from '../engine/Probability';
 
 export interface InterventionWarning {
@@ -17,8 +17,7 @@ export interface InterventionWarning {
 export function checkInterventionWarning(
   nodeId: string,
   proposedState: string,
-  graph: CausalGraph,
-  inferenceEngine: InferenceEngine
+  graph: CausalGraph
 ): InterventionWarning {
   const intervenedParents = graph.getIntervenedParents(nodeId);
   

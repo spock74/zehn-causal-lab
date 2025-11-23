@@ -18,7 +18,6 @@ interface InterventionControlsProps {
 const InterventionControls = ({ 
   selectedNode, 
   graph,
-  inferenceEngine,
   onIntervene, 
   onObserve 
 }: InterventionControlsProps) => {
@@ -58,7 +57,7 @@ const InterventionControls = ({
     }
 
     // Check for intervention warning
-    const warning = checkInterventionWarning(selectedNode.id, state, graph, inferenceEngine);
+    const warning = checkInterventionWarning(selectedNode.id, state, graph);
     
     if (warning.hasWarning) {
       setWarningDialog({
