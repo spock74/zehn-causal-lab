@@ -30,7 +30,7 @@ const CausalNode = ({ data, selected }: NodeProps<CausalNodeData>) => {
       className={clsx(
         'min-w-[180px] transition-all duration-300 overflow-hidden',
         selected ? 'ring-2 ring-primary shadow-lg' : 'shadow-md',
-        data.isIntervened ? 'bg-destructive/10 border-destructive' : 'bg-card'
+        data.isIntervened ? 'bg-destructive/10 border-destructive' : 'bg-white dark:bg-slate-950'
       )}
     >
       {/* Header */}
