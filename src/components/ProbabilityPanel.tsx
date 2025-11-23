@@ -77,7 +77,7 @@ const ProbabilityPanel = ({ selectedNode, graph, onUpdate, onClose }: Probabilit
   };
 
   return (
-    <div className="absolute bottom-4 right-4 w-96 bg-white dark:bg-slate-950 border border-border rounded-xl overflow-hidden flex flex-col max-h-[50vh] transition-all duration-300 shadow-xl">
+    <div className="absolute bottom-4 right-4 w-96 bg-card text-card-foreground border border-border rounded-xl overflow-hidden flex flex-col max-h-[50vh] transition-all duration-300 shadow-xl">
       {/* Header */}
       <div className="px-4 py-3 border-b border-border bg-muted/30 flex justify-between items-center">
         <h3 className="font-semibold text-foreground">Probability Table: {nodeData.variable.name}</h3>
