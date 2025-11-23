@@ -29,7 +29,7 @@ const ExamplesMenu = ({ onSelectGraph }: ExamplesMenuProps) => {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-slate-950 border border-border rounded-xl overflow-hidden shadow-xl animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="absolute top-full left-0 mt-2 w-64 bg-popover text-popover-foreground border border-border rounded-xl overflow-hidden shadow-xl animate-in fade-in slide-in-from-top-2 duration-200">
           <div className="p-2 space-y-1">
             {examples.map((ex) => (
               <button

@@ -83,10 +83,10 @@ const InterventionControls = ({
 
   return (
     <>
-      <div className="absolute top-4 right-4 w-72 bg-white dark:bg-slate-950 border border-border rounded-xl overflow-hidden flex flex-col transition-all duration-300 shadow-lg">
+      <div className="absolute top-4 right-4 w-72 bg-card text-card-foreground border border-border rounded-xl overflow-hidden flex flex-col transition-all duration-300 shadow-lg">
         {/* Header */}
-        <div className="px-4 py-3 border-b border-border bg-slate-100 dark:bg-slate-900 flex justify-between items-center">
-          <h3 className="font-semibold text-slate-900 dark:text-slate-100">{label}</h3>
+        <div className="px-4 py-3 border-b border-border bg-muted/50 flex justify-between items-center">
+          <h3 className="font-semibold">{label}</h3>
           <div className="flex gap-1">
             <button 
               onClick={() => setActiveTab('observe')}

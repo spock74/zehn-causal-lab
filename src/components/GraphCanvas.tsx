@@ -153,6 +153,7 @@ const GraphCanvas = ({ graph }: GraphCanvasProps) => {
         onNodeDoubleClick={handleNodeDoubleClick}
         nodeTypes={nodeTypes}
         fitView
+        fitViewOptions={{ maxZoom: 1 }}
         className="bg-background"
       >
         <Background color="hsl(var(--border))" gap={20} />

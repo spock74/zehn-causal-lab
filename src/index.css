@@ -87,13 +87,18 @@
   border: 1px solid hsl(var(--border));
   border-radius: var(--radius);
   overflow: hidden;
+  background-color: hsl(var(--card));
 }
 .react-flow__controls-button {
   background: hsl(var(--card));
   border-bottom: 1px solid hsl(var(--border));
   fill: hsl(var(--foreground));
+  color: hsl(var(--foreground));
+  stroke: hsl(var(--foreground));
 }
 .react-flow__controls-button:hover {
   background: hsl(var(--accent));
   fill: hsl(var(--accent-foreground));
+  color: hsl(var(--accent-foreground));
+  stroke: hsl(var(--accent-foreground));
 }
